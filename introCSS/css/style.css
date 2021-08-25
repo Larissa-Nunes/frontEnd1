@@ -1,0 +1,23 @@
+a{
+    color: rgb(87, 17, 87);
+    text-decoration-line:line-through;
+}
+
+h1{
+    color:#535252;
+    text-align: center;
+}
+
+h2{
+    background-color:rgb(133, 214, 235);
+}
+
+.texto-destacado{
+ font-size: medium;
+ color:rgb(179, 68, 87)
+}
+
+body{
+    background-color:rgb(247, 193, 221);
+}
+

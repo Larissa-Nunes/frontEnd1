@@ -1,0 +1,59 @@
+.container-pai {
+    display: flex;
+	flex-wrap: wrap;
+}
+
+/* converter flex-items para flex-container */
+.elemento-filho {
+    display: flex;
+}
+
+/*flex-direction - main-axis: eixo principal. cross-axis: perpendicular
+flex-direction: row - Os itens se dispõem no eixo x, da esquerda para direita (1, 2, 3)
+flex-direction: row-reverse - Os ítens se dispõem no eixo x, da direita para a esquerda (3, 2, 1)
+flex-direction: row-column - Os itens se dispõem no eixo y, de cima para baixo.
+flex-direction: row-column-reverse - Os itens se dispõem no eixo y, de baixo para cima.
+
+justify-content (horizontal): Com essa propriedade alinhamos os ítems à largura do main axis.
+justify-content: flex-start - Os itens se alinham respeitando o  início do main axis que já foi definido.
+justify-content: flex-end: Os itens se alinham respeitando o final do main axis que já foi definido.
+justify-content: center - Os itens se alinham ao centro do main axis.
+justify-content: flex-center - Os itens se distribuem de maneira uniforme. 
+Justify-content: space-between - O primeiro item será enviado ao início do main axis, e o último ítem, no final.
+
+P/ container de uma só linha (onde flex-flow se estabelece como no-wrap)
+Align-items (vertical): Com essa propriedade alinhamos os itens à largura do cross axis. Se não declararmos o valor para esta propriedade, o valor por padrão é stretch, 
+Align-items: stretch - Os itens se ajustam para englobar todo o container. 
+Align-items: flex-start - Os itens se alinham no início do cross-axis.
+Align-items: flex-end - Os itens se alinham no final do eixo transversal.
+Align-items: center - Os itens se alinham no centro do eixo transversal.
+
+P/ containers multilinha, devemos utilizar align-content.
+Align-content: alinhamos os itens à largura do cross axis quando os containers flexíveis incluem várias linhas (onde flex-flow se estabelece como wrap ou wrap-reverse).
+Align-content ( flex-start | flex-end )
+Align-content ( center | stretch )
+Align-content ( space-between | space-around )
+*/
+
+/*Controlamos a ordem de cada item, sem importar a ordem original que tenham dentro da estrutura do HTML.*/
+.caixa {
+    order: 1;
+} 
+/*passará ao final da fila (linha) por ser o maior número (1) - positivo*/
+/*passará ao início da fila (linha) por ser o menor número (-1) - negativo*/
+
+/* Flex-grow: Com essa propriedade definimos quanto pode chegar a crescer um item no caso de aumentar o espaço livre dentro do container. */
+.caixa-a, .caixa-b {
+    flex-grow: 1;
+} 
+/* Se ambos os itens têm a propriedade flex-grow com valor 1, à medida que o container aumenta, o espaço disponível será distribuído em partes iguais. */
+.caixa-b {
+    flex-grow: 1;
+} 
+/* Se somente um item tem a propriedade flex-grow, esse tentará ocupar o espaço livre disponível. */
+
+
+
+
+
+

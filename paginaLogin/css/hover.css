@@ -1,0 +1,10 @@
+button.btn:hover {
+    background-color: white;
+    color: purple;
+    font-weight: bold;
+}
+
+h1:hover {
+    color: pink;
+    font-weight: bold;
+}

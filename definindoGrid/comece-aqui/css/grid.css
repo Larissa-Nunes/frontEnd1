@@ -1,0 +1,33 @@
+/* ===================================== 
+   Grid Layout
+======================================== */
+
+.grid {
+   max-width: 800px;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: 150px 300px 150px; /* 1º row: header, 2º: main, 3º: footer */
+}
+
+.grid * { /* selecionar todas as tags dentro do grid */
+   text-align: center;
+   place-items: center;
+}
+
+header {
+   grid-column: 1 / 13;
+   background-color: blue;
+}
+
+main {
+   display: grid;
+   grid-column: 1 / 13;
+   grid-template-columns:  1fr 1fr;
+}
+
+footer {
+   grid-column: 1 / 13;
+}
+
+
+

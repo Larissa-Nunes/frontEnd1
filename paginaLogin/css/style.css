@@ -1,0 +1,60 @@
+* {
+    margin: O;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#form { /* configurações da div form*/
+    border: 2px solid rgb(138, 137, 137);
+    background-color: black;
+    padding: 30px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0px 0px 20px;
+    color: purple;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    outline: none; /* tira a borda que aparece ao clicar*/
+    background: none;
+    color: white;
+    border-bottom: 1px solid purple;  
+    margin-bottom: 30px;
+}
+
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='password']:hover {
+    background-color: purple;
+}
+
+::placeholder {
+    color: rgb(214, 212, 212);
+}
+
+button.btn {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /*transição quando passa o cursor e tira*/
+    cursor: pointer;
+}
+

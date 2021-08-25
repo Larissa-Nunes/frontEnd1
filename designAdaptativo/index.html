@@ -1,0 +1,54 @@
+<!--  TAG <meta> viewport dá ao navegador instruções de como se deve dimensionar, e escalar a página web quando ela carrega -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Porcentagens-->
+.elementoContainerPai { width: 300px }
+.elementoInteriorFilho { width: 50% } // Será 150px
+
+<!-- Os ems são sempre relativos ao elemento pai. Tomarão como valor de referência a propriedade font-size.
+ -->
+ p { font-size: 1.5em } // 16px * 1.5 = 24px
+
+ p { 
+    font-size: 20px;
+    line-height: 2em; // 20px * 2 = 40px
+padding: 1.5em; // 20px * 1.5 = 30px
+}
+
+<!-- Os rems funcionam muito parecido com os ems, com a diferença de que sempre usarão de base o tamanho do font-size do elemento <html>. -->
+    p { font-size: 1.5rem }
+
+<!-- Ao especificar min-width estamos dizendo: “se a viewport tem no mínimo N pixels de largura, serão aplicadas estas regras”. -->
+@media (min-width: 460px){
+    body {
+        background: red;
+    }
+}
+<!-- ORIENTAÇÃO - Ao especificar a orientação (portrait ou landscape) estamos dizendo: “se o viewport tiver no máximo N pixels de largura e, além disso, o dispositivo está em posição vertical/horizontal, serão aplicadas estas regras”.-->
+@media (max-width: 460px) and (orientation: landscape){
+    body {
+        background: blue;
+    }
+}
+
+<!-- Mobile First -->
+body {
+    background: red;
+}
+@media (min-width: 460px){
+    /* Tablets */
+}
+@media (min-width: 768px){
+    /* Laptop */
+}
+
+<!-- Mobile Last -->
+body {
+    background: red;
+}
+@media (max-width: 768px){
+    /* Tablets */
+}
+@media (max-width: 460px){
+    /* Smartphones */
+}
